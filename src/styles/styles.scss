@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+$backgroundColor: #E5E5E5;
+$primaryColor: #1C2937;
+$secundaryColor: #2296F3;
+$inputColor: #141E27;
+$fontColor: #D8D8D8;
+$borderColor: #FFFFFF;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: $backgroundColor;
+    color: $fontColor;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#root{
+    background-color: $primaryColor;
+    border-radius: 0.5em;
+    flex: 0 0 50%;
+    padding: 1em;
+}
+
+.header{
+    margin-bottom: 1rem;
+    *{
+        font-weight: normal;
+    }
+    .title{
+        text-align: center;
+    }
+
+    .sub-title{
+        width: 120px;
+        border-bottom: 1px solid $secundaryColor;
+    }
+}
+
+input[type=text] {
+    background-color: $inputColor;
+    border: 1px solid $secundaryColor;
+    padding: 0.25rem;
+    flex: 0 0 80%;
+}
+
+.task-form{
+    display: flex;
+    margin-bottom: 1rem;
+    *{
+        color: $fontColor;
+        margin: 0 0.25rem;
+    }
+    button {
+        background-color: $secundaryColor;
+        border-color: transparent;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.125rem;
+        flex: 0 0 auto;
+        cursor: pointer;
+    }
+    button:hover{
+        transform: scale(0.9);
+        background: #31708f;
+    }
+}
+
+.list-item{
+    border: 1px solid $secundaryColor;
+    padding: 0.25rem 0.5rem;
+    min-height: 250px;
+    .item{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0.5rem;
+        border-bottom: 1px solid $secundaryColor;
+    }
+    input[type=checkbox] {
+        background-color: $inputColor;
+        margin-right: 0.5rem;
+    }
+    .button{
+        margin: 0 0.25rem;
+        button{
+            color: $fontColor;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    input[type=text]{
+        color: $fontColor;
+        flex: 0 0 100%;
+    }
+}
+
+  .modal {
+    position:fixed;
+    padding: 1rem;
+    background: $primaryColor;
+    border-radius: 0.75rem;
+    border: 1px solid $borderColor;
+    width: 33%;
+    height: auto;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .modal-header{
+    margin-bottom: 1rem;
+  }
+
+  .modal-content{
+    margin-bottom: 2rem;
+    .text-center{
+        text-align: center;
+    }
+    button:hover{
+        transform: scale(0.9);
+        background: #31708f;
+    }
+  }
+
+  .modal-footer{
+      display: flex;
+      justify-content: flex-end;
+      button{
+            color: $secundaryColor;
+            background-color: transparent;
+            border: none;
+            margin: 0 1rem;
+      }
+  }
+
+  
